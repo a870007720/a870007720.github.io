@@ -1,0 +1,91 @@
+h1{
+	text-align: center;
+}
+header,footer,section{
+	border: 1px solid #bbb;
+	margin: 1% 0;
+	min-height: 120px;
+}
+aside,main{
+	border: 1px solid #bbb;
+}
+section,main{
+	min-height: 500px;
+}
+aside{
+height: 250px;
+}
+#B{
+	width: 90px;
+    padding: 0 5px 0 12px;
+    float: left;
+}
+#C{
+    width: 285px;
+    position: relative;
+    padding: 0 5px 0 65px;
+}
+#two{
+    width: 395px;
+    float: left;
+}
+#three{
+	width: 500px;
+    float: right;
+}
+#D{
+	width:500px ;
+	height: 300px;
+}
+#F{
+	margin: 0;
+    width: 1220px;
+    padding: 15px;
+    border: 0;
+    border-top: 1px solid #e4e4e4;
+}
+#E{
+	float: right;
+	width: 700px;
+}
+#G{
+	width: 250px;
+	height: 300px;
+}
+#M{
+	text-align: center;
+}
+h2{
+	text-align: center;
+	color: red;
+}
+a.A:hover{
+	color: #f00;
+}
+a.B:visited{
+	color: #0f0;
+}
+a.C:hover{
+	color: #00f;
+a.C:active{
+	color: #000;
+}
+
+a.D:hover{
+    color: #0f0;
+}
+a.D:active{
+  color: #000;
+}
+a.E:link,visited{
+	color: #cd00cd;
+	transition: all 1s;
+}
+a.E:hover{
+	color: #f0f800;
+	text-decoration: none;
+	background-color: #9a32cd;
+}
+a.E:active{
+	color: #adff2f;
+}
