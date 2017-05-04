@@ -1,0 +1,53 @@
+.cleanfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.A{
+	max-width: 1200px;
+	min-width: 800px;
+	margin: auto;
+}
+.A figure{
+	float: left;
+	margin: calc(10%/6);
+	width: 30%;
+	position: relative;
+}
+.A figure img{
+	width: 100%;
+}
+.A figure figcaption{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	right: 20px;
+	bottom: 20px;
+	z-index: 1;
+	border: 1px solid #fff;
+	outline: 20px solid raba(0,0,0,.8);
+	transition: all .5s;
+}
+.A figure:hover figcaption{
+	left: 10px;
+	top: 10px;
+	right: 10px;
+	bottom: 10px;
+	outline: 10px solid raba(0,0,0,.2);
+}
+.A figure figcaption h3{
+	position: absolute;
+	width: 17%;
+	height: 12%;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+	opacity: 0;
+	color: white;
+    transition: all .5s;
+}
+.A figure figcaption:hover h3{
+	opacity: 1;
+}
