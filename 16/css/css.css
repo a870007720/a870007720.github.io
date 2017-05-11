@@ -1,0 +1,52 @@
+.clearfix::after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.A{
+	width: 400px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,.5);
+	text-align: center;
+}
+.A h3{
+	text-align: center;
+}
+.A input{
+	width: 70%;
+	height: 30px;
+	line-height: 30px;
+	margin: 15px 0px;
+	border: none;
+	outline: none;
+	border: 1px dashed pink;
+	transition: all .5s;
+}
+.A input:hover{
+	border: 1px solid rgba(0,0,0,.5);
+	box-shadow: 0px 0px 6px 0px rgba(255,0,0,.5)
+}
+#s{
+	width:40%;
+	height: 50px;
+	position: absolute;
+	left: 30%;
+    bottom: -40px;
+    color: #fff;
+    letter-spacing: 0px;
+    background: cornflowerblue;
+    border: none;
+    opacity: .8;
+    box-shadow: 0px 3px rgba(50,50,100,.5),1px 1px 4px 0 rgba(0,0,0,.5);
+}
+#s:hover{
+	letter-spacing: 20px;
+	background: blueviolet;
+}
