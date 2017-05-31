@@ -1,0 +1,80 @@
+.clearfix::after{
+	content: "";
+    display: table;
+    clear: both;
+}
+body{
+	
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+.logo img{
+	width:80px;
+	height: auto;
+}
+header{
+	width: 100%;
+	padding: 20px 0;
+	position: fixed;
+	left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.05);
+}
+header .logo{
+	float: left;
+}
+header a{
+	text-decoration: none;
+	color: #fff;
+	transition: all .5s; 
+}
+header a:hover{
+	color: lightcoral;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size:4em ;
+	font-family: 'Shadows Into Light', cursive;
+}
+.topMenu{
+    float: right;
+}
+.topMenu ul{
+	list-style-type: none;
+}
+.topMenu ul li{
+	float: left;
+	margin: 15px 30px;
+}
+.banner{
+	min-height: 1400px;
+	background: url(../img/banner.jpg) no-repeat center top;
+}
+.banner .caption{
+	max-width: 800px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	color: #fff;
+}
+.banner .caption h1{
+	text-align: center;
+	padding: 15px;
+}
+.banner .caption h1 strong{
+	color: lightgreen;
+}
+.banner .caption p strong{
+    background-color: rgba(255,255,255,.5);
+    color: #000;
+    padding: 4px;
+}
