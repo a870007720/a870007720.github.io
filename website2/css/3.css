@@ -1,0 +1,274 @@
+.clearfix::after{
+	content: "";
+    display: table;
+    clear: both;
+}
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+.logo img{
+	width:80px;
+	height: auto;
+}
+header{
+	width: 100%;
+	padding: 20px 0;
+	position: fixed;
+	left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.05);
+}
+header .logo{
+	float: left;
+}
+header a{
+	text-decoration: none;
+	color: #fff;
+	transition: all .5s; 
+}
+header a:hover{
+	color: lightcoral;
+}
+header .logo img,
+header .logo span{
+	vertical-align: middle;
+}
+header .logo span{
+	font-size:4em ;
+	font-family: 'Shadows Into Light', cursive;
+}
+.topMenu{
+    float: right;
+}
+.topMenu ul{
+	list-style-type: none;
+}
+.topMenu ul li{
+	float: left;
+	margin: 15px 30px;
+}
+.banner{
+	min-height: 800px;
+	background: url(../img/banner.jpg) no-repeat center top;
+}
+.banner .caption{
+	max-width: 800px;
+	height: 180px;
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	color: #fff;
+}
+.banner .caption h1{
+	text-align: center;
+	padding: 15px;
+}
+.banner .caption h1 strong{
+	color: lightgreen;
+}
+.banner .caption p strong{
+    background-color: rgba(255,255,255,.5);
+    color: #000;
+    padding: 4px;
+}
+.container h2{
+	text-align: center;
+}
+.container h2+p{
+	text-align: center;
+	margin-bottom: 80px;
+}
+.img{
+	float: left;
+	width: 49%;
+	height: auto;
+}
+.img img{
+	width: 100%;
+}
+.pass{
+	width: 49%;
+	float: right;
+	line-height: 2;
+}
+.pass ol{
+	padding: 0;
+	list-style: none;
+	counter-reset: a;
+}
+.pass li{
+	counter-increment: a;
+}
+.pass li::before{
+	content: counter(a);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 20px;
+	border: 1px dashed #000;
+	margin-right: 20px;
+	transition: transform .5s;
+}
+.pass li:hover::before{
+	transform: translate(10px) rotate(360deg);
+	animation: go 2s;
+}
+.service{
+	background: url(../img/desktop.jpg) center center no-repeat;
+	background-size: cover;
+	box-shadow: inset 0px 0px 100px 50px rgba(0,0,0,.5);
+}
+.service .container{
+	z-index: 2;
+}
+
+.service ul{
+	list-style-type: none;
+}
+.service li{
+	width: 48%;
+	float: left;
+	text-align: right;
+	min-height: 100px;
+	margin: 20px 0px;
+	cursor: pointer;
+	
+}
+.service li::after{
+	content: '';
+	display: table;
+	clear: both;
+}
+.service li:nth-child(2n){
+	float: right;
+	text-align: left;
+}
+.content li i{
+	float: right;
+	padding: 5px 0px 5px 30px;
+	transition: all .5s;
+}
+.service li:nth-child(2n) i{
+	float: left;
+	padding: 5px 30px 5px 0px;
+}
+.content li:hover i{
+	color: lightblue;
+	transform: scale(1.2) rotate(5deg);
+}
+.service li h3{
+	display: inline-block;
+	margin: 0;
+}
+.case p a{
+	text-decoration: none;
+	color: orangered;
+}
+.content figure{
+	float: left;
+	overflow: hidden;
+	position: relative;
+	width: 24%;
+	margin: 10px calc(4%/3) 10px 0px;
+}
+.content figure:nth-child(4n){
+	margin-right: 0px;
+}
+.content figure img{
+	width: 100%;
+	height: auto;
+	transition: transform .5s;
+}
+.content figure:hover img{
+	transform: scale(1.2) rotate(5deg);
+}
+.content figcaption{
+	position: absolute;
+	left: 5%;
+	right: 5%;
+	top: 50%;
+	bottom: 5%;
+	background-color: rgba(255,255,255,.8);
+	padding: 10px;
+}
+.content figcaption .time{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	background-color: powderblue;
+	font-size: 0.8em;
+}
+.content figcaption .month,
+.content figcaption .year
+{
+	line-height: 25px;
+}
+.content figcaption .month{
+	background-color: rgba(0,0,0,.1);
+}
+.content figcaption h3{
+	margin: 11px 0  0 70px;
+}
+.content figcaption p{
+	font-size: 0.8em;
+	line-height: 2;
+	padding: 5px 0 0 0;
+}
+.content figcaption .data{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 1.5;
+	text-align: right;
+	background-color:rgba(0,0,0,.3);
+}
+.contact{
+	background: url(../img/android-1869510_1920.jpg) no-repeat center top;
+	background-size: cover;
+	min-height: 600px;
+	color: #fff;
+}
+.container h2+p{
+    text-align: center;
+}
+.left{
+	float: left;
+	width: 48%;
+	margin-right: 4%;
+}
+.left ul{
+	list-style-type: none;
+} 
+.left li i{
+	padding: 0px 10px 0px 0px;
+	float: left;
+}
+.left li{
+	margin-left: -40px;
+	margin-bottom:20px;
+}
+.right{
+	float: right;
+	width: 48%;
+}
+.right input,
+.right textarea{
+	width: 100%;
+	padding: 10px 16px;
+	margin: 10px 0;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	background-color: rgba(255,255,255,.5);
+}
+footer{
+	text-align: center;
+}
