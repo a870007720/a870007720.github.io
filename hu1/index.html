@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>hu1</title>
+		<style>
+			#a{
+				font-size: 14px;
+				text-indent: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<!--内嵌js，导入外部的js-->
+		<a id="b" href="javascript:">大</a>&nbsp;<a id="c" href="javascript:">小</a>
+		
+		<div id="a">
+			<p>我有一只小毛驴</p>
+		</div>
+	
+		<script type="text/javascript" charset="utf-8">
+			var a=document.getElementById('a');
+			var b=document.getElementById('b');
+			var c=document.getElementById('c');
+			var i=14;
+			b.onclick=function(){
+				i+=2;
+				a.style.fontSize=i+'px';
+			}
+			c.onclick=function(){
+				i-=2;
+				a.style.fontSize=i+'px';
+			}
+		</script>
