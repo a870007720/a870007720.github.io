@@ -6,17 +6,17 @@
 		<link id="one" rel="stylesheet" type="text/css" href="css/css.css"/>
 	</head>
 	<body>
-		<a id="first" href="">皮肤1</a>
-		<a id="final" href="">皮肤2</a>
+		<a id="first" href="javascript:">皮肤1</a>
+		<a id="final" href="javascript:">皮肤2</a>
 		<script type="text/javascript">
-            var one=document.getElementById("one");
 			var first=document.getElementById("first");
 			var final=document.getElementById("final");
+			var one=document.getElementById("one");
 			first.onclick=function(){
-				one.href="css/css1.css";
+				one.href="css/css.css";
 			}
 			final.onclick=function(){
-			    one.href="css/css2.css";
+			    one.href="css/css1.css";
 			}
 		</script>
 	</body>
