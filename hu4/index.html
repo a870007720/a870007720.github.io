@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>打字效果</title>
+		<style type="text/css">
+			body{
+				background-image: url(img/001.jpg);
+				background-size: 100%;
+			}
+			body h1{
+				color: white;
+				text-align: center;
+			}
+			body p{
+				color: white;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="title">
+			神探夏洛克
+		</h1>
+		<p class="text">
+			该剧改编自阿瑟·柯南·道尔创作的侦探小说《福尔摩斯探案集》，将原著的时间背景从19世纪搬到了21世纪，讲述在繁华热闹的伦敦大都市中，时尚的大侦探夏洛克·福尔摩斯和他的朋友约翰·H·华生经受的一系列危险的、不同寻常的历险
+		</p>
+		<script type="text/javascript">
+			function typeText(x,speed,z){
+				var oTitle=x;
+				var str=oTitle.innerText;
+				var i=0;
+				var loop=loop||false;
+				oTitle.innerText="";
+	
+				var a=setInterval(function () {
+					if(i<str.length){
+						oTitle.innerText+=str[i];
+					}else{
+						if(z){
+						i=-1;
+						oTitle.innerText="";
+						}else{
+							clearInterval(a);
+						}
+					}
+					i++;
+				},speed);
+			}
+			
+			var oH1=document.querySelector(".title");
+			var op=document.querySelector(".text");
+			typeText(oH1,500);
+			typeText(op,200,true);
+		</script>
+	</body>
+</html>
