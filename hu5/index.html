@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+
+		</style>
+	</head>
+	<body>
+		<div id="word"></div>
+
+		<div class="k">
+			<input type="button" value="1" />
+			<input type="button" value="2" />
+			<input type="button" value="3" />
+			<input type="button" value="4" />
+			<input type="button" value="5" />
+			<input type="button" value="6" />
+		</div>
+		<script type="text/javascript">
+			var oBtnList=document.querySelectorAll(".k input");
+			var oword=document.getElementById("word");
+			for(var i=0;i<oBtnList.length;i++){
+				oBtnList[i].addEventListener("click",(function(index){
+					return function(){
+						oword.innerHTML="你点了 "+index
+					 };
+				   }(i+1)
+				 )	
+				);
+           }
+		</script>
+	</body>
+</html>
