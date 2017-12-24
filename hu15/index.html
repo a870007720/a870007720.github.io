@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.menuContainer{
+				border: 1px dashed #333;
+			    width: 400px;
+			    padding: 3px 2px 2px 10px;
+			}
+			.menu{
+				padding: 0;
+				margin: 0;
+				overflow: hidden;
+			}
+			.menu li{
+				list-style-type: none;
+				font-size: 12px;
+				line-height: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="menuContainer">
+			<ul class="menu">
+				<li>1</li>
+				<li>11</li>
+				<li>111</li>
+				<li>1111</li>
+				<li>11111</li>
+				<li>111111</li>
+			</ul>
+		</div>
+		<script type="text/javascript">
+			var oMenu=document.querySelector('.menu'),
+			    oMenuItem=document.querySelectorAll('.menu li');
+			
+			var itemHeight=oMenuItem[0].offsetHeight,
+			    n=2,
+			    totalHeight=itemHeight*n,
+			    runFlag=true;
+			
+			for (var i = 0; i < oMenuItem.length; i++) {
+				oMenuItem[i].innerHTML=(i+1)+". "+oMenuItem[i].innerHTML;
+			}
+				
+			oMenu.style.height=totalHeight+"px";
+			oMenu.innerHTML+=oMenu.innerHTML;
+			oMenu.addEventListener("mouseover",function(){runFlag=false});
+			oMenu.addEventListener("mouseout",function(){runFlag=true});
+			
+			function run() {
+				var stop=oMenu.scrollTop%totalHeight==0&&!runFlag;
+				if(!stop){
+					oMenu.scrollTop==oMenu.scrollHeight/2?oMenu.scrollTop=0:oMenu.scrollTop++;
+				}
+				setTimeout(run,oMenu.scrollTop%totalHeight==0?1000:10);
+			};
+			setTimeout(run,1000);
+		</script>
+	</body>
+</html>
