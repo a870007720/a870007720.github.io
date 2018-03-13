@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Tabs</title>
+		<style>
+			.clearfix::after {
+				content: "";
+				clear: both;
+				display: block;
+			}
+			
+			.tabs .tabItems .item {
+				padding: 10px 30px;
+				float: left;
+				border-radius: 2px 2px 0px 0px;
+				margin: 0px 2px;
+				cursor: pointer;
+			}
+			
+			.tabContents .content {
+				width: 600px;
+				min-height: 300px;
+			}
+			
+			.tabs div div:nth-child(1) {
+				background-color: lightcyan;
+			}
+			
+			.tabs div div:nth-child(2) {
+				background-color: lawngreen;
+			}
+			
+			.tabs div div:nth-child(3) {
+				background-color: lightcoral;
+			}
+		</style>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+
+	<body>
+		<div id="a" class="tabs">
+			<div class="tabItems clearfix">
+				<div class="item" v-for="(item,index) in tabsItems" @click="toggleTabs(index)">{{item}}</div>
+			</div>
+			<div class="tabContents">
+				<div id="news" v-for="(item,index) in tabsContents" class="content" v-show="nowIndex===index">{{item}}</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script>
+	var a = new Vue({
+		el: '#a',
+		data: {
+			tabsItems: ['新闻', '通知','公告'], 
+			tabsContents:['新闻内容','通知内容','公告内容'],
+			nowIndex: 0
+		},
+		methods: {
+			toggleTabs: function(index) {
+				this.nowIndex = index;
+			}
+		}
+	})
+</script>
